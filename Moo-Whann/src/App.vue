@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-blue-400 text-gray-100 py-3.5 px-6 shadow md:flex justify-between">
+  <div class="text-gray-100 py-3.5 px-6 shadow md:flex justify-between" style="background: #7149C6;">
     <navbar />
   </div>
   <div>
