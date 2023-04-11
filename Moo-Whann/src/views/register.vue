@@ -1,11 +1,14 @@
 <template>
-    <div class="flex justify-center items-center h-48">
+    <div class="flex justify-center items-center h-48 border">
         <div>
             <h1 class="font-bold text-lg">REGISTRATION</h1>
-            <div class="flex ">
-                <h1>Require Fieldasdasdddsas</h1>
-            </div>
         </div>
+        <div class="">
+            djwhdwjdhwhhwwwwwwwwwwwwwwwwwwwwwwww
+        </div>
+    </div>
+    <div class="flex justify-center items-center">
+        asdasdfeskfesfjejdsmdsnkdnsj
     </div>
 </template>
 
