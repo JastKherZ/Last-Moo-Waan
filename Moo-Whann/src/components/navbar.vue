@@ -22,8 +22,7 @@
         <div class="flex font-bold space-x-10 items-center">
             <router-link to="/login">
                 <div class="space-x-5">
-                    <button class="text-sm">JastKherZ</button>
-                    <i class="fa-solid fa-user"></i>
+                    <button class="text-sm"><i class="fa-solid fa-user"></i></button>
                 </div>
             </router-link>
             <!-- <router-link to="/login">
