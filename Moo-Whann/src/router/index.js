@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
-import navbar from '../components/navbar'
+import navbar from '../components/navbar.vue'
+import login from '../views/login.vue'
 
 
 const routes = [
@@ -8,11 +9,16 @@ const routes = [
         name: '',
         component: navbar
     },
+    {
+        path: '/login',
+        name: 'loginView',
+        component: login
+    },
 
 ]
 
 const router = createRouter({
-    history: createWebHistory(process.env.BASE_URL),
+    history: createWebHistory(import.meta.env.BASE_URL),
     routes
   })
   

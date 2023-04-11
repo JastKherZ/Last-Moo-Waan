@@ -11,14 +11,14 @@
         </div>
     </div>
     <div class="justify-items-end text-lg font-bold">
-        <button class="text-base">
-            <a href="../components/login.vue" class="">Login</a>
-        </button>
+        <router-link to="/login">
+            <button class="text-base">login</button>
+        </router-link>
     </div>
 </template>
 
 <script>
 export default {
-
+    name: 'login',
 }
 </script>
