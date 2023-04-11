@@ -1,38 +1,40 @@
 <template>
-    <div class="justify-start text-gray-100 py-5 px-6 shadow md:flex justify-between font-bold text-black" style="background: #ffffff;">
+    <div class="flex py-5 px-6 justify-between font-bold text-black">
         <div class="flex">
-            <button class="text-5xl font-bold">
+            <button class="text-5xl">
                 <router-link to="/">MOOWHAN</router-link>
             </button>
-            <button class="text-sm ml-24 mt-3">
-                <router-link to="/">HOME</router-link>
-            </button>
-            <button class="text-sm ml-5 mt-3">
-                <a href="#" class="">SHOP</a>
-            </button>
-            <button class="text-sm ml-5 mt-3">
-                <a href="#" class="">SHOP</a>
-            </button>
-            <button class="text-sm ml-5 mt-3">
-                <a href="#" class="">SHOP</a>
-            </button>
-            <button class="text-sm ml-5 mt-3">
-                <a href="#" class="">SHOP</a>
-            </button>
+            <div class="flex items-center">
+                <button class="text-sm ml-24">
+                    <router-link to="/">STATIONERY</router-link>
+                </button>
+                <button class="text-sm ml-5">
+                    <a href="#" class="">PAPER</a>
+                </button>
+                <button class="text-sm ml-5">
+                    <a href="#" class="">ACCESSORIES</a>
+                </button>
+                <button class="text-sm ml-5">
+                    <a href="#" class="">DECORATIONS</a>
+                </button>
+            </div>
         </div>
-        <div class="flex justify-end text-lg font-bold">
+        <div class="flex font-bold space-x-10 items-center">
             <router-link to="/login">
-                <button class="text-base mx-3 mt-3">Login</button>
+                <div class="space-x-5">
+                    <button class="text-sm">JastKherZ</button>
+                    <i class="fa-solid fa-user"></i>
+                </div>
             </router-link>
-            <router-link to="/register">
-                <button class="text-base mx-3 mt-3 rounded-full w-full bg-red-600 text-black">Register</button>
-            </router-link>
+            <!-- <router-link to="/login">
+                <button class="text-sm">REGISTER</button>
+            </router-link> -->
         </div>
     </div>
 </template>
 
 <script>
 export default {
-    name: 'login',
+    name: 'navbar',
 }
 </script>
