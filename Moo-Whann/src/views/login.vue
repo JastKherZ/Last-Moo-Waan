@@ -1,5 +1,5 @@
 <template>
-    <div class="flex justify-center items-center h-screen" style="background: #FFDEB9;">
+    <!-- <div class="flex justify-center items-center h-screen" style="background: #FFDEB9;">
         <div class="w-96 p-6 shadow-lg rounded-md columns-1" style="background: #FC2947;">
             <h1 class="text-3xl block text-center font-semibold"><i class="fa-solid fa-user"></i> SIGN IN</h1>
             <hr class="mt-3">
@@ -39,6 +39,28 @@
         <div class="">
 
         </div>
+    </div> -->
+    <div class="flex flex-col justify-center items-center border bg-gray-100">
+        <div class="font-bold text-center border">
+            <h1>SIGN IN</h1>
+        </div>
+        <div class="flex justify-between border">
+            <div class="columns-3">
+                <div class="flex flex-col">
+                    <h1 class="font-bold text-sm">RETURNING CUSTOMERS</h1>
+                    <label for="username">Username</label>
+                    <input type="text">
+                    <label for="password">Password</label>
+                    <input type="password">
+                </div>
+                <div class="bg-gray-500 w-[2px] h-[100px]">
+                    
+                </div>
+                <div>
+                    <h1 class="font-bold text-sm">CREATE AN ACCOUNT</h1>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -51,14 +73,14 @@ export default {
         }
     },
     computed: {
-        
-  },
-  methods: {
-    toggleShow() {
-      this.showPassword = !this.showPassword;
-      console.log(this.showPassword);
-      return this.showPassword ? this.password = 'password' : this.password = 'text'
+
+    },
+    methods: {
+        toggleShow() {
+            this.showPassword = !this.showPassword;
+            console.log(this.showPassword);
+            return this.showPassword ? this.password = 'password' : this.password = 'text'
+        }
     }
-  }
 };
 </script>
