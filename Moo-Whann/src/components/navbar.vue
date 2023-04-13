@@ -4,7 +4,7 @@
             <button class="text-5xl">
                 <router-link to="/">MOOWHAN</router-link>
             </button>
-            <div class="flex items-center border">
+            <div class="flex items-center">
                 <button class="text-sm ml-24">
                     <router-link to="/">STATIONERY</router-link>
                 </button>

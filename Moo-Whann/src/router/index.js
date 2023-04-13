@@ -24,8 +24,7 @@ const routes = [
         path: '/basket',
         name: 'basketPage',
         component: basket
-    }
-
+    },
 ]
 
 const router = createRouter({
