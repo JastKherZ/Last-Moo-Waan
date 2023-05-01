@@ -63,11 +63,11 @@
                 <div class="bg-gray-500 w-[1px] h-[150px]">
                 </div>
                 <div>
-                    <h1 class="font-bold text-sm pb-6">CREATE AN ACCOUNT</h1>
-                    <div class="flex flex-col">
-                        <label for="">ยังไม่มีสมาชิกใช่ไหม</label>
+                    <h1 class="font-bold text-sm pb-2.5">CREATE AN ACCOUNT</h1>
+                    <label for="">ยังไม่มีสมาชิกใช่ไหม</label>
+                    <div class="flex flex-col pt-28">
                         <button class="bg-white font-bold">
-                        <router-link to="/register">CREATE AN ACCOUNT</router-link>
+                            <router-link to="/register">CREATE AN ACCOUNT</router-link>
                         </button>
                     </div>
                 </div>
