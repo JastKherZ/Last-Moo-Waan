@@ -25,9 +25,11 @@
                     <button class="text-sm"><i class="fa-solid fa-user"></i></button>
                 </div>
             </router-link>
-            <!-- <router-link to="/login">
-                <button class="text-sm">REGISTER</button>
-            </router-link> -->
+            <router-link to="/basket">
+                <div class="space-x-5">
+                    <button class="text-sm"><i class="fa-solid fa-user"></i></button>
+                </div>
+            </router-link>
         </div>
     </div>
 </template>
