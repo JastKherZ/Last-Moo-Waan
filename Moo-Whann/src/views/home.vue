@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col justify-center items-center border">
+    <div class="flex flex-col justify-center items-center border bg-gray-100">
         <div class="text-center py-10">
             <h1 class="text-xl font-bold">พบกับร้าน MOOWHAN ใหม่ในปี 2023</h1>
             <p>ร้านค้าที่ขายทุกๆอย่างให้คุณ ดูแลและรักษาความปลอดภัยให้กับสินค้าของคุณ</p>
