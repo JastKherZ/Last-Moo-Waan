@@ -27,7 +27,7 @@
             </router-link>
             <router-link to="/basket">
                 <div class="space-x-5">
-                    <button class="text-sm"><i class="fa-solid fa-user"></i></button>
+                    <button class="text-sm"><i class="fa-regular fa-basket-shopping"></i></button>
                 </div>
             </router-link>
         </div>
