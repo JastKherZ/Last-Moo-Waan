@@ -6,16 +6,16 @@
             </button>
             <div class="flex items-center">
                 <button class="text-sm ml-24">
-                    <router-link to="/">STATIONERY</router-link>
+                    <router-link to="/">เครื่องเขียน</router-link>
                 </button>
                 <button class="text-sm ml-5">
-                    <a href="#" class="">PAPER</a>
+                    <a href="#" class="">กระดาษ</a>
                 </button>
                 <button class="text-sm ml-5">
-                    <a href="#" class="">ACCESSORIES</a>
+                    <a href="#" class="">อุปกรณ์ตกแต่ง</a>
                 </button>
                 <button class="text-sm ml-5">
-                    <a href="#" class="">DECORATIONS</a>
+                    <a href="#" class="">อื่นๆ</a>
                 </button>
             </div>
         </div>
