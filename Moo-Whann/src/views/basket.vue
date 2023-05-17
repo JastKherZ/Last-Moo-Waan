@@ -4,7 +4,11 @@
             <h1>SHOPPING BAG</h1>
         </div>
         <div class="border">
-            <button>CONTINUE SHOPPING</button>
+            <router-link to="/">
+                <div class="space-x-5">
+                    <button class="text-sm">CONTINUE SHOPPING</button>
+                </div>
+            </router-link>
         </div>
     </div>
 </template>
