@@ -1,5 +1,5 @@
 <template>
-    <div class="flex py-5 px-6 justify-between font-bold text-black">
+    <div class="flex py-5 px-6 justify-between font-bold text-black" >
         <div class="flex">
             <button class="text-5xl">
                 <router-link to="/">MOOWHAN</router-link>
@@ -16,6 +16,10 @@
                 </button>
                 <button class="text-sm ml-5">
                     <router-link to = '/tool'>อื่นๆ</router-link>
+                </button>
+                
+                <button class="text-sm ml-5" v-if="admin">
+                    <router-link to = '/edititem'>แก้ไขข้อมูลผู้ใช้</router-link>
                 </button>
             </div>
         </div>
@@ -36,7 +40,15 @@
 </template>
 
 <script>
+
+
 export default {
     name: 'navbar',
+
+    data() {
+        return {
+            admin: true
+        }
+    }
 }
 </script>

@@ -7,6 +7,7 @@ import accessory from '../views/accessory.vue'
 import paper from '../views/paper.vue'
 import decoration from '../views/decoration.vue'
 import tool from '../views/tool.vue'
+import item from '../views/edititem.vue'
 
 const routes = [
     {
@@ -48,6 +49,11 @@ const routes = [
         path: '/tool',
         name: 'ToolPage',
         component : tool
+    },
+    {
+        path: '/edititem',
+        name: 'EditItem',
+        component : item
     },
 ]
 
