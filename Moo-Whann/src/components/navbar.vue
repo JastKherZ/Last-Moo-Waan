@@ -19,7 +19,7 @@
                 </button>
                 
                 <button class="text-sm ml-5" v-if="admin">
-                    <router-link to = '/edititem'>แก้ไขข้อมูลผู้ใช้</router-link>
+                    <router-link to = '/edititem'>แก้ไขข้อมูลสินค้า</router-link>
                 </button>
             </div>
         </div>
