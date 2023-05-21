@@ -16,7 +16,7 @@
            </div>
            <div class="flex justify-center ">
                 <div class="flex">
-                    <p class="bg-white border border-black text-center text-black h-[30px] w-[120px] font-bold mr-5">Price per item :</p>
+                    <p class="bg-white border border-black text-center text-black h-[30px] w-[140px] font-bold mr-5">PRICE PER ITEM :</p>
                 </div>
                 <div class="flex">
                      <input class ="border border-black" type="number">
@@ -25,7 +25,7 @@
 
             <div class="flex justify-center mt-10 ml-10">
                 <div class="flex">
-                    <p class="bg-white border border-black text-center text-black h-[30px] w-[80px] font-bold  mr-5">Item left :</p>
+                    <p class="bg-white border border-black text-center text-black h-[30px] w-[100px] font-bold  mr-5">ITEM LEFT :</p>
                 </div>
                 <div class="flex ">
                      <input class="border border-black" type="number">

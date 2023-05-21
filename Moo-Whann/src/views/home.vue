@@ -1,9 +1,8 @@
 <template>
     <div class="flex flex-col justify-center items-center border bg-gray-100">
         <div class="text-center py-10">
-            <h1 class="text-xl font-bold">พบกับร้าน MOOWHAN ใหม่ในปี 2023</h1>
+            <h1 class="text-3xl font-bold">พบกับร้าน MOOWHAN ใหม่ในปี 2023</h1>
             <p>ร้านค้าที่ขายทุกๆอย่างให้คุณ ดูแลและรักษาความปลอดภัยให้กับสินค้าของคุณ</p>
-            <p class="underline underline-offset-1" @click="">ดูข้อมูลเพิ่มเติม</p>
         </div>
 
         <!-- รูปร้าน -->
@@ -13,7 +12,7 @@
 
         <!-- สินค้าขายดี -->
         <div class="text-center">
-            <p class="text-xl font-bold py-6">สินค้าขายดีประจำเดือน</p>
+            <p class="text-3xl font-bold py-6">สินค้าขายดีประจำเดือน</p>
             <div class="flex">
                 <div class="max-w-sm rounded overflow-hidden shadow-lg m-6">
                     <img class="w-full"

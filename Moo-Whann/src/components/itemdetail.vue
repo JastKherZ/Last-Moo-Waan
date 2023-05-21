@@ -12,10 +12,8 @@
                 <p class="ml-28 mb-5">คำอธิบาย: (Description)</p>
                 <p class="ml-28 mb-5">ราคา: (Price)</p>
                 <p class="ml-28 mb-5">จำนวน <input type="number"> </p>
-                
             </div>
             <div class="flex justify-end w-[300px]">
-                
                 <button class="bg-black text-white font-bold h-[35px] w-[80px] mt-auto mb-5"><router-link to="/basket">เพิ่มสินค้า</router-link></button>
             </div>
         </div>

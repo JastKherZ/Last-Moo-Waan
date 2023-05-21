@@ -1,6 +1,6 @@
 <template>
     <div class="text-center">
-        <p class="text-xl font-bold py-6">กระดาษ</p>
+        <p class="text-3xl font-bold py-6">กระดาษ</p>
         <!-- ต้องหาวิธีใช้ component card มาช่วย -->
         <!-- 4 -->
         <div class="flex">
