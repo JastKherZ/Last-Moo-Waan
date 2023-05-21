@@ -87,4 +87,44 @@ router.post('/register', async (req, res) => {
 });
 
 
+
+const schema2 = Joi.object({
+  username: Joi.string().required(),
+  password: Joi.string().min(6).max(16).required(),
+  
+});
+
+//login
+router.post('/login', async (req, res) => {
+  const qry2 = req.body;
+
+  const result = schema2.validate(qry2);
+
+  if (result.error) {
+    return res.status(400).send({ "error" :  result.error.details[0].message });
+  }
+
+  try {
+    const user = await prisma.user.findUnique({ where: { username : qry2.username } });
+    
+    if (!user) {
+      res.status(404).json({ error: 'User not found.' });
+      return;
+    }
+
+    const passwordMatch = await bcrypt.compare(qry2.password, user.password);
+
+    if (!passwordMatch) {
+      res.status(401).json({ error: 'Invalid password.' });
+      return;
+    }
+
+    res.json({ message: 'Login successful!' });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Login failed.' });
+  }
+});
+
+
 exports.router = router;

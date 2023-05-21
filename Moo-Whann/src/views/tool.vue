@@ -14,6 +14,9 @@
                         <p class="text-gray-700 text-base">
                             {{ item.details }}
                         </p>
+                        <p class="text-gray-700 text-base">
+                            {{ item.details }}
+                        </p>
                     </div>
                 </div>
             </div>
