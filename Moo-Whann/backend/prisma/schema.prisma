@@ -1,0 +1,67 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = "mysql://root:1234@localhost:3306/moowhaan2"
+}
+
+model user{
+  id String @id @default(uuid())
+  fname String?
+  lname String?
+  username String?
+  password String?
+  createdAt DateTime @default(now())
+
+  payment Payment[] @relation("user_payment")
+  order Order[] @relation("user_order")
+}
+
+model Item{
+  item_id String @id @default(uuid())
+  name String?
+  price Float?
+  details String?
+  type Type @default(paper)
+  
+  order Order[] @relation("item_order")
+}
+
+enum Type {
+  paper
+  write
+  decoration
+  etc
+}
+
+enum Status {
+  complete
+  not_complete
+}
+
+
+model Payment{
+  payment_id String @id @default(uuid())
+  user_id String
+  image String?
+
+  user user @relation("user_payment", fields: [payment_id], references: [id], onDelete: Cascade)
+
+}
+
+model Order {
+  id String @id @default(uuid())
+  user_id String
+  item_id String
+  status Status @default(not_complete)
+  createdAt DateTime @default(now())
+  
+
+  user user @relation("user_order", fields: [user_id], references: [id], onDelete: Cascade)
+  item Item @relation("item_order", fields: [item_id], references: [item_id], onDelete: Cascade)
+}

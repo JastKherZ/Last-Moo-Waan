@@ -6,7 +6,7 @@
             </button>
             <div class="flex items-center">
                 <button class="text-sm ml-24">
-                    <router-link to="/accessory">เครื่องเขียน</router-link>
+                    <router-link to="/write">เครื่องเขียน</router-link>
                 </button>
                 <button class="text-sm ml-5">
                     <router-link to ='/paper'>กระดาษ</router-link>
