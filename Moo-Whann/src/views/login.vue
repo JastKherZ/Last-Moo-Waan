@@ -1,78 +1,43 @@
 <template>
-    <!-- <div class="flex justify-center items-center h-screen" style="background: #FFDEB9;">
-        <div class="w-96 p-6 shadow-lg rounded-md columns-1" style="background: #FC2947;">
-            <h1 class="text-3xl block text-center font-semibold"><i class="fa-solid fa-user"></i> SIGN IN</h1>
-            <hr class="mt-3">
-            <div class="mt-3">
-                <label for="username" class="block text-base mb-2">Username</label>
-                <input type="text" id="username"
-                    class="border w-full text-base px-2 py-1 focus:outline-none focus:ring-0 focus:border-gray-600"
-                    placeholder="Enter Username" />
-            </div>
-            <div class="mt-3">
-                <label for="password" class="block text-base mb-2">Password</label>
-                <input :type="password" id="password"
-                    class="border w-full text-base px-2 py-1 focus:outline-none focus:ring-0 focus:border-gray-600"
-                    placeholder="Enter Password" />
-            </div>
-            <div class="control">
-                <div class="mt-3 flex justify-between items-center">
-                    <div>
-                        <input type="checkbox" @click="toggleShow">
-                        <label> Show Password</label>
-                    </div>
-                    <div>
-                        <a href="#" class="text-indigo-800 font-semibold">Forgot Password</a>
-                    </div>
-                </div>
-            </div>
-            <div class="mt-5">
-                <button
-                    class="border-2 border-indigo-700 bg-indigo-700 py-1 w-full rounded-md hover:bg-sky-700 font-semibold"
-                    style="background: #FFDEB9; border: #FFDEB9;">Login</button>
-            </div>
-        </div>
-
-        <div class="columns-2 bg-gray-500 w-[2px] h-[100px]">
-        </div>
-
-        <div class="">
-
-        </div>
-    </div> -->
-    <div class="flex flex-col justify-center items-center border bg-gray-100">
-        <div class="font-bold text-center py-10">
+    <div class="flex flex-col justify-center items-center border bg-gray-100 h-[800px] w-full">
+        <div class="font-bold text-center py-4">
             <h1 class="text-lg">SIGN IN</h1>
         </div>
-        <div class="flex justify-between border h-[400px] w-[450px]">
-            <div class="flex space-x-8 pt-6">
-                <div class="flex flex-col">
-                    <h1 class="font-bold text-sm pb-6">RETURNING CUSTOMERS</h1>
-                    <label for="username">Username</label>
-                    <input type="text" class="" v-model="username">
-                    <label for="password">Password</label>
-                    <input :type="password" v-model="password">
-                    <div class="flex">
-                        <input type="checkbox" @click="toggleShow">
-                        <label for="">Show Password</label>
-                    </div>
-                    <button class="bg-black text-white font-bold">
-                        <a @click.prevent="validateForm">SIGN IN</a>
+        <div class="flex">
+            <div class="flex flex-col my-12">
+                <h1 class="font-bold text-sm pb-6">RETURNING CUSTOMERS</h1>
+                <label for="username" class="text-sm">Username</label>
+                <input type="text" class="px-2 border rounded text-sm mt-1 w-64 h-8 italic"
+                    placeholder="Please enter your Username" v-model="username">
+                <label for="password" class="text-sm mt-1">Password</label>
+                <input :type="password" class="px-2 border rounded text-sm mt-1 w-64 h-8 italic"
+                    placeholder="Please enter your Password" v-model="password">
+                <div class="flex mt-1">
+                    <input type="checkbox" @click="toggleShow">
+                    <label for="" class="mx-2 text-sm">Show Password</label>
+                </div>
+                <button class="bg-black text-white font-bold mt-28 h-10 w-64 border rounded">
+                    <a @click.prevent="validateForm">SIGN IN</a>
+                </button>
+            </div>
+
+            <div class="flex bg-gray-500 w-[1px] h-[360px] mx-16 mt-12">
+            </div>
+
+            <div class="flex flex-col my-12">
+                <h1 class="font-bold text-sm pb-6">CREATE AN ACCOUNT</h1>
+                <label for="" class="items-center text-sm mb-2">สมัครสมาชิคกับ Moo Whan <br> และรับสิทธิประโยชน์ของการมีบัญชี:</label>
+                <li class="px-2 text-sm">ติดตามข่าวสารใหม่ๆ รวดเร็วทันใจ</li>
+                <li class="px-2 text-sm">เช็คประวัติการสั่งซื้อและดูข้อมูลสินค้า</li>
+                <li class="px-2 text-sm">ดูสินค้าได้แม้จะอยู่ที่ไหนก็ตาม</li>
+                <router-link to="/register">
+                    <button class="bg-black text-white font-bold mt-36 h-10 w-64 border rounded">
+                        CREATE AN ACCOUNT
                     </button>
-                </div>
-                <div class="bg-gray-500 w-[1px] h-[150px]">
-                </div>
-                <div>
-                    <h1 class="font-bold text-sm pb-2.5">CREATE AN ACCOUNT</h1>
-                    <label for="">ยังไม่มีสมาชิกใช่ไหม</label>
-                    <div class="flex flex-col pt-28">
-                        <button class="bg-white font-bold">
-                            <router-link to="/register">CREATE AN ACCOUNT</router-link>
-                        </button>
-                    </div>
-                </div>
+                </router-link>
             </div>
         </div>
+
     </div>
 </template>
 
@@ -96,18 +61,15 @@ export default {
         },
         validateForm() {
             if (this.username == '') {
-                alert('Please enter a username');
+                alert('Please enter your Username');
                 console.log(this.username);
                 return false;
             }
 
             else if (this.password == '') {
-                alert('Please enter a password');
+                alert('Please enter your Password');
                 console.log(this.password);
                 return false;
-            }
-            else if (this.password != '123123123') {
-                alert('Wrong Password!')
             }
             else {
                 this.$router.push("/")

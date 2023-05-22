@@ -1,27 +1,27 @@
 <template>
-    <div class="flex flex-col justify-center items-center border bg-gray-100">
-      <div class="border font-bold mt-[50px]">
-        <h1>REGISTRATION</h1>
+    <div class="flex flex-col justify-center items-center bg-gray-100">
+      <div class="font-bold mt-[50px]">
+        <h1 class="text-4xl">REGISTRATION</h1>
       </div>
-      <div class="border w-96 p-6 text-sm">
-        <div class="border w-full"></div>
+      <div class="w-96 p-6 text-sm">
+        <div class="w-full"></div>
         <div class="flex flex-col">
-          <label for="fname">First Name</label>
-          <input type="text" class="border w-full" placeholder="Please enter your First Name" v-model="register.fname">
-          <label for="lname">Last Name</label>
-          <input type="text" placeholder="Please enter your Last Name" v-model="register.lname">
-          <label for="username">Username</label>
-          <input type="text" id="username" placeholder="Please enter your Username" v-model="register.username">
-          <label for="">Password</label>
-          <input :type="password" id="password" placeholder="Please enter your new Password" v-model="register.password">
-          <label for="">Confirm Password</label>
-          <input :type="password" placeholder="Please confirm your new Password" v-model="register.repassword">
+          <label for="fname" class="mt-1 font-bold">First Name</label>
+          <input type="text" class="px-2 border rounded mt-1 w-full h-8" placeholder=" Please enter your First Name" v-model="register.fname">
+          <label for="lname" class="mt-1 font-bold">Last Name</label>
+          <input type="text" class="border px-2 rounded mt-1 w-full h-8" placeholder=" Please enter your Last Name" v-model="register.lname">
+          <label for="username" class="mt-1 font-bold">Username</label>
+          <input type="text" class="px-2 border rounded mt-1 w-full h-8" id="username" placeholder=" Please enter your Username" v-model="register.username">
+          <label for="password" class="mt-1 font-bold">Password</label>
+          <input :type="password" class="px-2 border rounded mt-1 w-full h-8" id="password" placeholder=" Please enter your new Password" v-model="register.password">
+          <label for="password" class="mt-1 font-bold">Confirm Password</label>
+          <input :type="password" class="px-2 border rounded mt-1 w-full h-8" placeholder=" Please confirm your new Password" v-model="register.repassword">
           <div class="flex items-center mb-4">
             <input type="checkbox" @click="toggleShow">
-            <label for="default-checkbox" class="ml-2 text-sm font-medium">Default checkbox</label>
+            <label for="default-checkbox" class="mt-1 ml-2 text-sm font-medium">Show Password</label>
           </div>
-          <div class="border text-center">
-            <button @click="register1()" class="bg-black text-white font-bold">
+          <div class="text-center">
+            <button @click="register1()" class="bg-black text-white font-bold border w-40 h-16">
               REGISTER
             </button>
           </div>
