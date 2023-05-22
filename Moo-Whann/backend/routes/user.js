@@ -71,9 +71,15 @@ router.post('/register', async (req, res) => {
       }
     });
 
-    // const accesToken  = jwt.sign(user, process.env.ACCESTOKEN_TOKEN_SECRET)
+    const accesToken  = jwt.sign( {
+        
+      fname : qry.fname,
+      lname : qry.lname,
+      username : qry.username,
+      password: hashedPassword,
+    }, "process.env.ACCESTOKEN_TOKEN_SECRET")
 
-    res.status(200).json({ user });
+    res.status(200).json({ user, accesToken });
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: 'Something went wrong' });
@@ -113,7 +119,7 @@ router.post('/login', async (req, res) => {
       return;
     }
 
-    res.json({ message: 'Login successful!' });
+    res.json(user);
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: 'Login failed.' });

@@ -17,8 +17,17 @@
                     <div class="px-6 py-4">
                         <div class="font-bold text-xl mb-2">{{ item.name }}</div>
                         <p class="text-gray-700 text-base">
-                            {{ item.details }}
+                            {{ item.price }} ฿
                         </p>
+                        <div class="flex justify-end mt-5 ">
+                            <div class="flex">
+                                <button class=" mr-5 h-[30px] w-[90px] border border-black bg-white font-bold">
+                                    <router-link :to="`/itemdetail/${item.item_id}`">
+                                        ดูเพิ่มเติม
+                                    </router-link>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

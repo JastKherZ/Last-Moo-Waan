@@ -55,40 +55,43 @@
       },
       async register1() {
         // Validate the form before registration
-        if (!this.validateForm()) {
-          return;
-        }
+        // if (!this.validateForm()) {
+        //   return;
+        // }
   
         try {
-          const res = await axios.post("http://localhost:3000/api/user/register", {
-            fname: this.register.fname,
-            lname: this.register.lname,
-            username: this.register.username,
-            password: this.register.password,
-            repassword: this.register.repassword
-          });
-          localStorage.setItem("token", res.data.token);
-          localStorage.setItem("user", JSON.stringify(res.data.fname))
-          // this.$router.push("/login")
+            if(this.password == this.repassword){
+                const res = await axios.post("http://localhost:3000/api/user/register", {
+                  fname: this.register.fname,
+                  lname: this.register.lname,
+                  username: this.register.username,
+                  password: this.register.password,
+                  repassword: this.register.repassword
+                });
+            }
+        //   localStorage.setItem("token", res.data.token);
+        //   localStorage.setItem("user", JSON.stringify(res.data.fname))
+          this.$router.push("/login")
         }
         catch (err) {
+            alert(err)
           console.log(err);
         }
       },
       validateForm() {
-        if (this.register.fname.trim() === '') {
+        if (this.register.fname === '') {
           alert('Please enter your First Name');
           return false;
         }
-        if (this.register.lname.trim() === '') {
+        if (this.register.lname === '') {
           alert('Please enter your Last Name');
           return false;
         }
-        if (this.register.username.trim() === '') {
+        if (this.register.username === '') {
           alert('Please enter a Username');
           return false;
         }
-        if (this.register.password.trim() === '') {
+        if (this.register.password === '') {
           alert('Please enter a Password');
           return false;
         }

@@ -56,7 +56,7 @@ router.put("/admin/edititem/:id", async (req, res) => {
 
     try {
         const product = await prisma.item.update({
-          where: { id: id },
+          where: { item_id: id },
           data: { price : qry.price, amount : qry.amount }
         });
         res.json({ message: 'Product updated successfully', product });
