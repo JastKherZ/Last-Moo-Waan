@@ -49,15 +49,15 @@
                 <div class="flex flex-col">
                     <h1 class="font-bold text-sm pb-6">RETURNING CUSTOMERS</h1>
                     <label for="username">Username</label>
-                    <input type="text" class="">
+                    <input type="text" class="" v-model="username">
                     <label for="password">Password</label>
-                    <input :type="password">
+                    <input :type="password" v-model="password">
                     <div class="flex">
                         <input type="checkbox" @click="toggleShow">
                         <label for="">Show Password</label>
                     </div>
                     <button class="bg-black text-white font-bold">
-                        <router-link to="/">SIGN IN</router-link>
+                        <a @click.prevent="validateForm">SIGN IN</a>
                     </button>
                 </div>
                 <div class="bg-gray-500 w-[1px] h-[150px]">
@@ -81,7 +81,8 @@ export default {
     data() {
         return {
             showPassword: true,
-            password: 'password'
+            username: "",
+            password: "",
         }
     },
     computed: {
@@ -92,6 +93,27 @@ export default {
             this.showPassword = !this.showPassword;
             console.log(this.showPassword);
             return this.showPassword ? this.password = 'password' : this.password = 'text'
+        },
+        validateForm() {
+            if (this.username == '') {
+                alert('Please enter a username');
+                console.log(this.username);
+                return false;
+            }
+
+            else if (this.password == '') {
+                alert('Please enter a password');
+                console.log(this.password);
+                return false;
+            }
+            else if (this.password != '123123123') {
+                alert('Wrong Password!')
+            }
+            else {
+                this.$router.push("/")
+            }
+
+            return true;
         }
     }
 };
