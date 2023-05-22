@@ -21,7 +21,7 @@
             <label for="default-checkbox" class="mt-1 ml-2 text-sm font-medium">Show Password</label>
           </div>
           <div class="text-center">
-            <button @click="register1()" class="bg-black text-white font-bold border w-40 h-16">
+            <button @click="register1()" class="bg-black text-white font-bold border rounded h-12 w-36">
               REGISTER
             </button>
           </div>
