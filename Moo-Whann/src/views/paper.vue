@@ -18,7 +18,7 @@
                             <div class="flex">
                                 <button class=" mr-5 h-[30px] w-[90px] border border-black bg-white font-bold">
                                     <router-link :to="`/itemdetail/${item.item_id}`">
-                                        ดูเพิ่มเติม {{ item }}
+                                        ดูเพิ่มเติม
                                     </router-link>
                                 </button>
                             </div>

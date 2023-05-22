@@ -13,7 +13,7 @@
                    <option value="mercedes">Mercedes</option>
                    <option value="audi">Audi</option>
                </select>
-           </div>
+           </div>   
            <div class="flex justify-center ">
                 <div class="flex">
                     <p class="bg-white border border-black text-center text-black h-[30px] w-[140px] font-bold mr-5">PRICE PER ITEM :</p>

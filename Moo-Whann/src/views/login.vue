@@ -57,7 +57,7 @@
                         <label for="">Show Password</label>
                     </div>
                     <button class="bg-black text-white font-bold">
-                        <a @click.prevent="validateForm">SIGN IN</a>
+                        <a @click.prevent="signin">SIGN IN</a>
                     </button>
                 </div>
                 <div class="bg-gray-500 w-[1px] h-[150px]">
@@ -77,6 +77,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
     data() {
         return {
@@ -94,26 +95,20 @@ export default {
             console.log(this.showPassword);
             return this.showPassword ? this.password = 'password' : this.password = 'text'
         },
-        validateForm() {
-            if (this.username == '') {
-                alert('Please enter a username');
-                console.log(this.username);
-                return false;
-            }
-
-            else if (this.password == '') {
-                alert('Please enter a password');
-                console.log(this.password);
-                return false;
-            }
-            else if (this.password != '123123123') {
-                alert('Wrong Password!')
-            }
-            else {
+        async signin() {
+            try {
+                const res = await axios.post("http://localhost:3000/api/user/login", {
+                    username: this.username,
+                    password: this.password
+                })
+                .then(res => {
+                    localStorage.setItem('user', JSON.stringify(res.data))
+                })
                 this.$router.push("/")
+            } catch (error) {
+                alert(error)
+                console.log(error);
             }
-
-            return true;
         }
     }
 };

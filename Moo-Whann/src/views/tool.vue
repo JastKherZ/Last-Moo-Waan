@@ -14,9 +14,15 @@
                         <p class="text-gray-700 text-base">
                             {{ item.details }}
                         </p>
-                        <p class="text-gray-700 text-base">
-                            {{ item.details }}
-                        </p>
+                        <div class="flex justify-end mt-5 ">
+                            <div class="flex">
+                                <button class=" mr-5 h-[30px] w-[90px] border border-black bg-white font-bold">
+                                    <router-link :to="`/itemdetail/${item.item_id}`">
+                                        ดูเพิ่มเติม
+                                    </router-link>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
