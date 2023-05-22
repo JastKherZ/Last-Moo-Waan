@@ -7,10 +7,10 @@
             <div class="flex flex-col my-12">
                 <h1 class="font-bold text-sm pb-6">RETURNING CUSTOMERS</h1>
                 <label for="username" class="text-sm">Username</label>
-                <input type="text" class="px-2 border rounded text-sm mt-1 w-64 h-8 italic"
+                <input type="text" class="px-2 border rounded text-sm mt-1 w-64 h-8"
                     placeholder="Please enter your Username" v-model="username">
                 <label for="password" class="text-sm mt-1">Password</label>
-                <input :type="password" class="px-2 border rounded text-sm mt-1 w-64 h-8 italic"
+                <input :type="password" class="px-2 border rounded text-sm mt-1 w-64 h-8"
                     placeholder="Please enter your Password" v-model="password">
                 <div class="flex mt-1">
                     <input type="checkbox" @click="toggleShow">
