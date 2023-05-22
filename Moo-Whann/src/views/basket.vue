@@ -1,10 +1,11 @@
 <template>
-    <div class="flex flex-col border">
-        <div class="flex justify-center items-center my-8 border">
-            <h1 class="font-bold">SHOPPING BAG</h1>
+    <div class="flex flex-col items-center border bg-gray-100 h-[800px] w-full">
+        <div class="flex flex-col items-center my-8 border">
+            <h1 class="text-xl font-bold">SHOPPING BAG</h1>
+            <label for="" class="text-sm">ตะกร้าสินค้า (number)</label>
         </div>
         <div class="flex justify-center items-center border my-4">
-            <p class="text-sm underline m-2">ตระกร้าสินค้า (number)</p>
+            <p class="text-sm underline m-2">ตะกร้าสินค้า (0)</p>
         </div>
         <div class="flex flex-col border">
             <p class="text-sm ml-2">คุณมีสินค้า number รายการอยู่ในตะกร้า</p>
