@@ -8,7 +8,7 @@ import paper from '../views/paper.vue'
 import decoration from '../views/decoration.vue'
 import tool from '../views/tool.vue'
 import item from '../views/edititem.vue'
-import itemdetail from '../components/itemdetail.vue'
+import itemdetail from '../views/itemdetail.vue'
 
 const routes = [
     {
@@ -57,7 +57,7 @@ const routes = [
         component : item
     },
     {
-        path: '/itemdetail',
+        path: '/itemdetail/:id',
         name: 'itemdetail',
         component : itemdetail
     },

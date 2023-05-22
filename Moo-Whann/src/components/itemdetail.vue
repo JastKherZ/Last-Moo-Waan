@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
     <div class="flex justify-center items-center bg-gray-100">
         <div class="flex border h-[500px] w-[850px]">
             <div class="flex mt-5">
@@ -24,4 +24,4 @@
 export default {
     name: 'itemdetail',
 }
-</script>
+</script> -->

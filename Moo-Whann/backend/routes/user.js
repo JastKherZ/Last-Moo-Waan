@@ -39,29 +39,22 @@ router.post('/register', async (req, res) => {
 
   const result = schema1.validate(qry);
 
-
+  const sameuser = await prisma.user.findFirst({
+    where : { username : qry.username }
+  })
   // console.log(result);
 
 
 
+  if (sameuser) {
+    return res.status(400).send({ "error" : "Username already use"})
+  }
+
   if (result.error) {
-    // if (result.error.details[0].path[0] == 'fname'){
-    //   return res.status(400).send({ "error " : result.error.details[0].message})  
-    // }
-    // if (result.error.details[0].path[0] == 'lname'){
-    //   return res.status(400).send({ "error " : result.error.details[0].message})  
-    // }
-    // if (result.error.details[0].path[0] == 'username'){
-    //   return res.status(400).send({ "error " : result.error.details[0].message})  
-    // }
-    // if (result.error.details[0].path[0] == 'password'){
-    //   return res.status(400).send({ "error " : result.error.details[0].message})  
-    // }
-    // if (result.error.details[0].path[0] == 'repassword'){
-    //   return res.status(400).send({ "error " : result.error.details[0].message})  
-    // }
     return res.status(400).send({ "error" :  result.error.details[0].message });
   }
+
+
 
   try {
     // Hash the password
@@ -75,11 +68,12 @@ router.post('/register', async (req, res) => {
         lname : qry.lname,
         username : qry.username,
         password: hashedPassword,
-        
       }
     });
 
-    res.json({ message: 'User registered successfully', user });
+    // const accesToken  = jwt.sign(user, process.env.ACCESTOKEN_TOKEN_SECRET)
+
+    res.status(200).json({ user });
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: 'Something went wrong' });

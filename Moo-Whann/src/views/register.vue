@@ -5,13 +5,7 @@
         </div>
         <div class="border w-96 p-6 text-sm">
             <div class="border w-full">
-                <label for="" class="flex flex-col">Title</label>
-                <select class="">
-                    <option value="">Please Select</option>
-                    <option value="">นาย</option>
-                    <option value="">นาง</option>
-                    <option value="">นางสาว</option>
-                </select>
+                
             </div>
             <div class="flex flex-col">
                 <label for="fname">First Name</label>
@@ -29,8 +23,8 @@
                     <label for="default-checkbox" class="ml-2 text-sm font-medium">Default checkbox</label>
                 </div>
                 <div class="border text-center">
-                    <button class="bg-black text-white font-bold">
-                        <router-link to="/login">REGISTER</router-link>
+                    <button @click="register1()" class="bg-black text-white font-bold">
+                        REGISTER
                     </button>
                 </div>
             </div>
@@ -62,15 +56,22 @@ export default {
             console.log(this.showPassword);
             return this.showPassword ? this.password = 'password' : this.password = 'text'
         },
-        async reg() {
-            const res = await axios.post("http://localhost:3000/api/user", {
-                fname : this.register.fname,
-                lname : this.register.lname,
-                username : this.register.username,
-                password : this.register.password,
-                repassword : this.register.repassword
-            })
-            
+        async register1() {
+            try{
+                const res = await axios.post("http://localhost:3000/api/user/register", {
+                    fname : this.register.fname,
+                    lname : this.register.lname,
+                    username : this.register.username,
+                    password : this.register.password,
+                    repassword : this.register.repassword
+                });
+                localStorage.setItem("token", res.data.token);
+                localStorage.setItem("user", JSON.stringify(res.data.fname))
+                // this.$router.push("/login")
+            }
+            catch (err) {
+                console.log(err);
+            }
         }
     }
 };
