@@ -28,6 +28,7 @@ model Item{
   amount Int?
   price Float?
   details String?
+  image String?
   type Type @default(paper)
   
   order Order[] @relation("item_order")

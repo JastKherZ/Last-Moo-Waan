@@ -7,7 +7,7 @@
             <div v-for="(item, i) in data" :key="i" class="col-span-3">
                 <div v-show="item.type === 'paper'" class="max-w-sm rounded overflow-hidden shadow-lg m-6">
                     <img class="w-full"
-                        src="https://media.discordapp.net/attachments/595608417234845715/1097742119977898034/magic_pen.jpeg?width=448&height=448"
+                        :src="`${item.image}`"
                         alt="Sunset in the mountains">
                     <div class="px-6 py-4">
                         <div class="font-bold text-xl mb-2">{{ item.name }}</div>
@@ -54,6 +54,7 @@ export default {
             let write = res.data.filter(todo => { if (todo.type === 'paper') return todo; }
             ); // throws error
             this.data = write
+            console.log(this.data);
         }
     }
 
